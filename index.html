@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casas en venta - Xátiva</title>
+  <style>
+    @font-face {
+      font-family: "Neutra";
+      src: url("./1. Insumos/01. Branding/Fonts/Neutra Text/neutra-text-light-5872613aeda5b.otf") format("opentype");
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Fahkwang";
+      src: url("./1. Insumos/01. Branding/Fonts/Fahkwang/Fahkwang-Regular.ttf") format("truetype");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Fahkwang";
+      src: url("./1. Insumos/01. Branding/Fonts/Fahkwang/Fahkwang-Bold.ttf") format("truetype");
+      font-weight: 700;
+    }
+
+    :root {
+      --bg-dark: #21262d;
+      --bg-deep: #171b21;
+      --cream: #e6e1db;
+      --gold: #bc935e;
+      --line: #3a424b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Fahkwang", Arial, sans-serif;
+      color: var(--cream);
+      background: var(--bg-dark);
+    }
+
+    .navbar {
+      background: rgba(20, 24, 29, 0.84);
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      border-bottom: 1px solid rgba(230, 225, 219, 0.15);
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: 0 auto;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 78px;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: "Neutra", sans-serif;
+      letter-spacing: 0.14em;
+      font-size: clamp(1.3rem, 2vw, 1.7rem);
+    }
+
+    .menu {
+      display: flex;
+      gap: clamp(10px, 2.2vw, 28px);
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: .95rem;
+      opacity: .72;
+    }
+
+    .menu a.active {
+      opacity: 1;
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 76vh;
+      position: relative;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(.48);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
+      padding: 60px 0;
+    }
+
+    .hero h1 {
+      font-family: "Neutra", sans-serif;
+      font-size: clamp(2rem, 6.8vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      letter-spacing: .04em;
+    }
+
+    .hero p {
+      line-height: 1.6;
+      color: #dbd4cc;
+      margin-bottom: 30px;
+    }
+
+    .btn-default {
+      display: inline-block;
+      padding: 11px 28px;
+      border: 1px solid var(--cream);
+      color: var(--cream);
+      text-decoration: none;
+      transition: .2s ease;
+      font-size: .92rem;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .btn-default:hover {
+      background: var(--cream);
+      color: var(--bg-dark);
+    }
+
+    .section {
+      padding: 72px 0;
+      background: var(--bg-dark);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 16px;
+      font-family: "Neutra", sans-serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: .03em;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #d2cbc2;
+      margin-bottom: 34px;
+    }
+
+    .step {
+      text-align: center;
+      color: var(--gold);
+      margin-bottom: 18px;
+      font-size: .96rem;
+      letter-spacing: .03em;
+    }
+
+    .modules-grid,
+    .types-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-deep);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-family: "Neutra", sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+
+    .badge {
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-size: .95rem;
+    }
+
+    .description {
+      color: #d7cfc6;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      min-height: 50px;
+    }
+
+    .types-wrap {
+      margin-top: 26px;
+      display: none;
+    }
+
+    .types-wrap.active {
+      display: block;
+    }
+
+    .summary {
+      background: #1b2027;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .summary-card {
+      border: 1px solid var(--line);
+      background: #161b22;
+    }
+
+    .summary-card .body {
+      padding: 20px;
+    }
+
+    .summary-card h4 {
+      font-family: "Neutra", sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .meta {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+      color: #ddd5cc;
+      font-size: .95rem;
+      line-height: 1.4;
+    }
+
+    .footer-note {
+      margin-top: 34px;
+      font-size: .84rem;
+      color: #c2b9af;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .modules-grid,
+      .types-grid,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 210px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" aria-label="Principal">
+    <div class="container">
+      <div class="logo">XÁTIVA</div>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#" class="active">Casas en venta</a></li>
+        <li><a href="#">Amenidades</a></li>
+        <li><a href="#">Ubicación</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <img class="hero-bg" src="./1. Insumos/06. Renders/3. RENDERS/RENDER CASAS.jpg" alt="Vista principal Xátiva">
+    <div class="container">
+      <div class="hero-content">
+        <h1>CASAS CON DISEÑO EXCLUSIVO</h1>
+        <p>
+          Disfruta de un hogar creado con arquitectura contemporánea y espacios funcionales en la zona de Lomas de Juriquilla.
+        </p>
+        <a class="btn-default" href="#tipologias">Más información</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="tipologias" class="section">
+    <div class="container">
+      <h2 class="section-title"><b>XÁTIVA</b> ES TU ESPACIO</h2>
+      <p class="section-subtitle">Contamos con dos tipos de módulos de vivienda de 2 y 3 recámaras.</p>
+      <div class="step"><span>Paso 1:</span> Selecciona el módulo</div>
+
+      <div class="modules-grid">
+        <article class="card">
+          <img src="./1. Insumos/06. Renders/tipologías residencias/activa-1n.png" alt="Módulo A">
+          <div class="card-body">
+            <h3>Módulo A</h3>
+            <div class="badge">2 recámaras</div>
+            <p class="description">Tres viviendas distribuidas una en planta baja de 152.55 m² y dos dúplex de 152.79 m².</p>
+            <button class="btn-default module-btn" data-module="A">Ver tipologías</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="./1. Insumos/06. Renders/tipologías residencias/altiva-1n.png" alt="Módulo B">
+          <div class="card-body">
+            <h3>Módulo B</h3>
+            <div class="badge">3 recámaras</div>
+            <p class="description">Tres viviendas distribuidas una en planta baja desde 167.71 m² y dos dúplex/triplex de hasta 180.76 m².</p>
+            <button class="btn-default module-btn" data-module="B">Ver tipologías</button>
+          </div>
+        </article>
+      </div>
+
+      <div id="typesA" class="types-wrap active">
+        <div class="step"><span>Paso 2:</span> Tipologías módulo A</div>
+        <div class="types-grid">
+          <article class="card">
+            <img src="./1. Insumos/06. Renders/Renders Casas/Fachada (1).jpg" alt="Tipología Nativa">
+            <div class="card-body">
+              <h3>Nativa</h3>
+              <div class="badge">Garden A | 2 recámaras</div>
+              <p class="description">Interior 107.10 m² + terraza 12.15 m² + patio 33.30 m².</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="./1. Insumos/06. Renders/tipologías residencias/activa-rooftop.png" alt="Tipología Activa">
+            <div class="card-body">
+              <h3>Activa</h3>
+              <div class="badge">Duplex | 2 recámaras</div>
+              <p class="description">Interior 99.74 m² + balcón 7.56 m² + rooftop 45.49 m².</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div id="typesB" class="types-wrap">
+        <div class="step"><span>Paso 2:</span> Tipologías módulo B</div>
+        <div class="types-grid">
+          <article class="card">
+            <img src="./1. Insumos/06. Renders/ULTIMOS RENDERS/Modulo B/Plantas arquitectonicas/Planta PB.png" alt="Tipología Cautiva">
+            <div class="card-body">
+              <h3>Cautiva</h3>
+              <div class="badge">Garden C | 3 recámaras</div>
+              <p class="description">Interior 125.32 m² + terraza 23.79 m² + garden variable de 18.60 m² a 106.20 m².</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="./1. Insumos/06. Renders/tipologías residencias/altiva-rooftop.png" alt="Tipología Altiva">
+            <div class="card-body">
+              <h3>Altiva</h3>
+              <div class="badge">Triplex | 3 recámaras</div>
+              <p class="description">Interior 113.86 m² + balcón 14.91 m² + rooftop 51.99 m².</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section summary">
+    <div class="container">
+      <div class="step"><span>Paso 3:</span> Resumen de vivienda y precios de referencia</div>
+      <div class="summary-grid">
+        <article class="summary-card">
+          <img src="./1. Insumos/06. Renders/Renders/Fachada Exterior.jpg" alt="Nativa">
+          <div class="body">
+            <h4>Nativa</h4>
+            <div class="price">Desde $3,831,464 MXN</div>
+            <ul class="meta">
+              <li>Tipología base: Garden A</li>
+              <li>Metros totales: 152.55 m²</li>
+              <li>Configuración: 2 recámaras + 2.5 baños</li>
+              <li>Inventario base: 17 viviendas</li>
+            </ul>
+          </div>
+        </article>
+        <article class="summary-card">
+          <img src="./1. Insumos/06. Renders/Renders/Fachada.jpg" alt="Activa">
+          <div class="body">
+            <h4>Activa</h4>
+            <div class="price">Desde $4,284,982 MXN</div>
+            <ul class="meta">
+              <li>Tipología base: Duplex</li>
+              <li>Metros totales: 152.79 m²</li>
+              <li>Configuración: 2 recámaras + 2.5 baños</li>
+              <li>Inventario base: 34 viviendas</li>
+            </ul>
+          </div>
+        </article>
+        <article class="summary-card">
+          <img src="./1. Insumos/06. Renders/ULTIMOS RENDERS/Modulo B/PB/PB_.png" alt="Cautiva">
+          <div class="body">
+            <h4>Cautiva</h4>
+            <div class="price">Desde $4,349,818 MXN</div>
+            <ul class="meta">
+              <li>Tipología base: Garden C</li>
+              <li>Metros totales: 167.71 m² a 255.31 m²</li>
+              <li>Configuración: 3 recámaras + 2.5 baños</li>
+              <li>Inventario base: 24 viviendas</li>
+            </ul>
+          </div>
+        </article>
+        <article class="summary-card">
+          <img src="./1. Insumos/06. Renders/ULTIMOS RENDERS/Modulo A/Plantas Arquitectonicas/Modula A/ROOF_post.png" alt="Altiva">
+          <div class="body">
+            <h4>Altiva</h4>
+            <div class="price">Desde $4,746,240 MXN</div>
+            <ul class="meta">
+              <li>Tipología base: Triplex</li>
+              <li>Metros totales: 180.76 m²</li>
+              <li>Configuración: 3 recámaras + 2.5 baños</li>
+              <li>Inventario base: 48 viviendas</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <p class="footer-note">
+        Precios y m² tomados de: “_xativa_modelo_de_precios_210425__ajustado_.xlsx” (Lista 0). Render y planos desde carpeta de insumos Xátiva.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const moduleButtons = document.querySelectorAll(".module-btn");
+    const typesA = document.getElementById("typesA");
+    const typesB = document.getElementById("typesB");
+
+    moduleButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.dataset.module;
+        const showA = target === "A";
+        typesA.classList.toggle("active", showA);
+        typesB.classList.toggle("active", !showA);
+        window.scrollTo({ top: typesA.offsetTop - 80, behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>
