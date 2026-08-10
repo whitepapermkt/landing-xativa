@@ -5,23 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Casas en venta - Xátiva</title>
   <style>
-    @font-face {
-      font-family: "Neutra";
-      src: url("./1. Insumos/01. Branding/Fonts/Neutra Text/neutra-text-light-5872613aeda5b.otf") format("opentype");
-      font-weight: 300;
-    }
-
-    @font-face {
-      font-family: "Fahkwang";
-      src: url("./1. Insumos/01. Branding/Fonts/Fahkwang/Fahkwang-Regular.ttf") format("truetype");
-      font-weight: 400;
-    }
-
-    @font-face {
-      font-family: "Fahkwang";
-      src: url("./1. Insumos/01. Branding/Fonts/Fahkwang/Fahkwang-Bold.ttf") format("truetype");
-      font-weight: 700;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;700&display=swap');
 
     :root {
       --bg-dark: #21262d;
@@ -31,11 +15,7 @@
       --line: #3a424b;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Fahkwang", Arial, sans-serif;
@@ -52,10 +32,7 @@
       border-bottom: 1px solid rgba(230, 225, 219, 0.15);
     }
 
-    .container {
-      width: min(1160px, 92%);
-      margin: 0 auto;
-    }
+    .container { width: min(1160px, 92%); margin: 0 auto; }
 
     .navbar .container {
       display: flex;
@@ -65,223 +42,51 @@
       gap: 20px;
     }
 
-    .logo {
-      font-family: "Neutra", sans-serif;
-      letter-spacing: 0.14em;
-      font-size: clamp(1.3rem, 2vw, 1.7rem);
-    }
+    .logo { letter-spacing: 0.14em; font-size: clamp(1.3rem, 2vw, 1.7rem); }
+    .menu { display: flex; gap: clamp(10px, 2.2vw, 28px); list-style: none; flex-wrap: wrap; }
+    .menu a { color: var(--cream); text-decoration: none; font-size: .95rem; opacity: .72; }
+    .menu a.active { opacity: 1; color: var(--gold); }
 
-    .menu {
-      display: flex;
-      gap: clamp(10px, 2.2vw, 28px);
-      list-style: none;
-      flex-wrap: wrap;
-    }
-
-    .menu a {
-      color: var(--cream);
-      text-decoration: none;
-      font-size: .95rem;
-      opacity: .72;
-    }
-
-    .menu a.active {
-      opacity: 1;
-      color: var(--gold);
-    }
-
-    .hero {
-      min-height: 76vh;
-      position: relative;
-      display: grid;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(.48);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 560px;
-      padding: 60px 0;
-    }
-
-    .hero h1 {
-      font-family: "Neutra", sans-serif;
-      font-size: clamp(2rem, 6.8vw, 4.8rem);
-      line-height: 1.05;
-      margin-bottom: 18px;
-      letter-spacing: .04em;
-    }
-
-    .hero p {
-      line-height: 1.6;
-      color: #dbd4cc;
-      margin-bottom: 30px;
-    }
+    .hero { min-height: 76vh; position: relative; display: grid; align-items: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.48); }
+    .hero-content { position: relative; z-index: 2; max-width: 560px; padding: 60px 0; }
+    .hero h1 { font-size: clamp(2rem, 6.8vw, 4.2rem); line-height: 1.05; margin-bottom: 18px; letter-spacing: .04em; }
+    .hero p { line-height: 1.6; color: #dbd4cc; margin-bottom: 30px; }
 
     .btn-default {
-      display: inline-block;
-      padding: 11px 28px;
-      border: 1px solid var(--cream);
-      color: var(--cream);
-      text-decoration: none;
-      transition: .2s ease;
-      font-size: .92rem;
-      cursor: pointer;
-      background: transparent;
+      display: inline-block; padding: 11px 28px; border: 1px solid var(--cream); color: var(--cream);
+      text-decoration: none; transition: .2s ease; font-size: .92rem; cursor: pointer; background: transparent;
     }
+    .btn-default:hover { background: var(--cream); color: var(--bg-dark); }
 
-    .btn-default:hover {
-      background: var(--cream);
-      color: var(--bg-dark);
-    }
+    .section { padding: 72px 0; background: var(--bg-dark); }
+    .section-title { text-align: center; margin-bottom: 16px; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: .03em; }
+    .section-subtitle { text-align: center; color: #d2cbc2; margin-bottom: 34px; }
+    .step { text-align: center; color: var(--gold); margin-bottom: 18px; font-size: .96rem; letter-spacing: .03em; }
 
-    .section {
-      padding: 72px 0;
-      background: var(--bg-dark);
-    }
+    .modules-grid, .types-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .card { background: var(--bg-deep); border: 1px solid var(--line); overflow: hidden; }
+    .card img { width: 100%; height: 230px; object-fit: cover; display: block; }
+    .card-body { padding: 20px; }
+    .card h3 { font-size: 1.8rem; margin-bottom: 4px; }
+    .badge { color: var(--gold); margin-bottom: 10px; font-size: .95rem; }
+    .description { color: #d7cfc6; line-height: 1.5; margin-bottom: 16px; min-height: 50px; }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 16px;
-      font-family: "Neutra", sans-serif;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      letter-spacing: .03em;
-    }
+    .types-wrap { margin-top: 26px; display: none; }
+    .types-wrap.active { display: block; }
 
-    .section-subtitle {
-      text-align: center;
-      color: #d2cbc2;
-      margin-bottom: 34px;
-    }
-
-    .step {
-      text-align: center;
-      color: var(--gold);
-      margin-bottom: 18px;
-      font-size: .96rem;
-      letter-spacing: .03em;
-    }
-
-    .modules-grid,
-    .types-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--bg-deep);
-      border: 1px solid var(--line);
-      overflow: hidden;
-    }
-
-    .card img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-body {
-      padding: 20px;
-    }
-
-    .card h3 {
-      font-family: "Neutra", sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 4px;
-    }
-
-    .badge {
-      color: var(--gold);
-      margin-bottom: 10px;
-      font-size: .95rem;
-    }
-
-    .description {
-      color: #d7cfc6;
-      line-height: 1.5;
-      margin-bottom: 16px;
-      min-height: 50px;
-    }
-
-    .types-wrap {
-      margin-top: 26px;
-      display: none;
-    }
-
-    .types-wrap.active {
-      display: block;
-    }
-
-    .summary {
-      background: #1b2027;
-    }
-
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .summary-card {
-      border: 1px solid var(--line);
-      background: #161b22;
-    }
-
-    .summary-card .body {
-      padding: 20px;
-    }
-
-    .summary-card h4 {
-      font-family: "Neutra", sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 6px;
-    }
-
-    .price {
-      font-size: 1.2rem;
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .meta {
-      list-style: none;
-      display: grid;
-      gap: 7px;
-      color: #ddd5cc;
-      font-size: .95rem;
-      line-height: 1.4;
-    }
-
-    .footer-note {
-      margin-top: 34px;
-      font-size: .84rem;
-      color: #c2b9af;
-      text-align: center;
-    }
+    .summary { background: #1b2027; }
+    .summary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .summary-card { border: 1px solid var(--line); background: #161b22; }
+    .summary-card .body { padding: 20px; }
+    .summary-card h4 { font-size: 1.8rem; margin-bottom: 6px; }
+    .price { font-size: 1.2rem; color: var(--gold); font-weight: 700; margin-bottom: 14px; }
+    .meta { list-style: none; display: grid; gap: 7px; color: #ddd5cc; font-size: .95rem; line-height: 1.4; }
+    .footer-note { margin-top: 34px; font-size: .84rem; color: #c2b9af; text-align: center; }
 
     @media (max-width: 900px) {
-      .modules-grid,
-      .types-grid,
-      .summary-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card img {
-        height: 210px;
-      }
+      .modules-grid, .types-grid, .summary-grid { grid-template-columns: 1fr; }
+      .card img { height: 210px; }
     }
   </style>
 </head>
@@ -300,13 +105,11 @@
   </nav>
 
   <header class="hero">
-    <img class="hero-bg" src="./1. Insumos/06. Renders/3. RENDERS/RENDER CASAS.jpg" alt="Vista principal Xátiva">
+    <img class="hero-bg" src="https://xativa.mx/wp-content/themes/xativa/assets/img/casas/bg-main-casas-v2.webp" alt="Vista principal Xátiva">
     <div class="container">
       <div class="hero-content">
         <h1>CASAS CON DISEÑO EXCLUSIVO</h1>
-        <p>
-          Disfruta de un hogar creado con arquitectura contemporánea y espacios funcionales en la zona de Lomas de Juriquilla.
-        </p>
+        <p>Disfruta de un hogar creado con arquitectura contemporánea y espacios funcionales en la zona de Lomas de Juriquilla.</p>
         <a class="btn-default" href="#tipologias">Más información</a>
       </div>
     </div>
@@ -320,7 +123,7 @@
 
       <div class="modules-grid">
         <article class="card">
-          <img src="./1. Insumos/06. Renders/tipologías residencias/activa-1n.png" alt="Módulo A">
+          <img src="https://xativa.mx/wp-content/themes/xativa/assets/img/casas/moduloA2.webp" alt="Módulo A">
           <div class="card-body">
             <h3>Módulo A</h3>
             <div class="badge">2 recámaras</div>
@@ -330,7 +133,7 @@
         </article>
 
         <article class="card">
-          <img src="./1. Insumos/06. Renders/tipologías residencias/altiva-1n.png" alt="Módulo B">
+          <img src="https://xativa.mx/wp-content/themes/xativa/assets/img/casas/moduloB.webp" alt="Módulo B">
           <div class="card-body">
             <h3>Módulo B</h3>
             <div class="badge">3 recámaras</div>
@@ -344,7 +147,7 @@
         <div class="step"><span>Paso 2:</span> Tipologías módulo A</div>
         <div class="types-grid">
           <article class="card">
-            <img src="./1. Insumos/06. Renders/Renders Casas/Fachada (1).jpg" alt="Tipología Nativa">
+            <img src="https://xativa.mx/wp-content/uploads/2025/05/nativa.png" alt="Tipología Nativa">
             <div class="card-body">
               <h3>Nativa</h3>
               <div class="badge">Garden A | 2 recámaras</div>
@@ -352,7 +155,7 @@
             </div>
           </article>
           <article class="card">
-            <img src="./1. Insumos/06. Renders/tipologías residencias/activa-rooftop.png" alt="Tipología Activa">
+            <img src="https://xativa.mx/wp-content/uploads/2025/05/activa-1n.png" alt="Tipología Activa">
             <div class="card-body">
               <h3>Activa</h3>
               <div class="badge">Duplex | 2 recámaras</div>
@@ -366,7 +169,7 @@
         <div class="step"><span>Paso 2:</span> Tipologías módulo B</div>
         <div class="types-grid">
           <article class="card">
-            <img src="./1. Insumos/06. Renders/ULTIMOS RENDERS/Modulo B/Plantas arquitectonicas/Planta PB.png" alt="Tipología Cautiva">
+            <img src="https://xativa.mx/wp-content/uploads/2025/05/cautiva.png" alt="Tipología Cautiva">
             <div class="card-body">
               <h3>Cautiva</h3>
               <div class="badge">Garden C | 3 recámaras</div>
@@ -374,7 +177,7 @@
             </div>
           </article>
           <article class="card">
-            <img src="./1. Insumos/06. Renders/tipologías residencias/altiva-rooftop.png" alt="Tipología Altiva">
+            <img src="https://xativa.mx/wp-content/uploads/2025/05/altiva-1n.png" alt="Tipología Altiva">
             <div class="card-body">
               <h3>Altiva</h3>
               <div class="badge">Triplex | 3 recámaras</div>
@@ -391,7 +194,7 @@
       <div class="step"><span>Paso 3:</span> Resumen de vivienda y precios de referencia</div>
       <div class="summary-grid">
         <article class="summary-card">
-          <img src="./1. Insumos/06. Renders/Renders/Fachada Exterior.jpg" alt="Nativa">
+          <img src="https://xativa.mx/wp-content/uploads/2025/05/nativa-sala.jpg" alt="Nativa">
           <div class="body">
             <h4>Nativa</h4>
             <div class="price">Desde $3,831,464 MXN</div>
@@ -404,7 +207,7 @@
           </div>
         </article>
         <article class="summary-card">
-          <img src="./1. Insumos/06. Renders/Renders/Fachada.jpg" alt="Activa">
+          <img src="https://xativa.mx/wp-content/uploads/2025/05/activa-2n.png" alt="Activa">
           <div class="body">
             <h4>Activa</h4>
             <div class="price">Desde $4,284,982 MXN</div>
@@ -417,7 +220,7 @@
           </div>
         </article>
         <article class="summary-card">
-          <img src="./1. Insumos/06. Renders/ULTIMOS RENDERS/Modulo B/PB/PB_.png" alt="Cautiva">
+          <img src="https://xativa.mx/wp-content/uploads/2025/05/cautiva.png" alt="Cautiva">
           <div class="body">
             <h4>Cautiva</h4>
             <div class="price">Desde $4,349,818 MXN</div>
@@ -430,7 +233,7 @@
           </div>
         </article>
         <article class="summary-card">
-          <img src="./1. Insumos/06. Renders/ULTIMOS RENDERS/Modulo A/Plantas Arquitectonicas/Modula A/ROOF_post.png" alt="Altiva">
+          <img src="https://xativa.mx/wp-content/uploads/2025/05/altiva-2n.png" alt="Altiva">
           <div class="body">
             <h4>Altiva</h4>
             <div class="price">Desde $4,746,240 MXN</div>
@@ -444,24 +247,21 @@
         </article>
       </div>
 
-      <p class="footer-note">
-        Precios y m² tomados de: “_xativa_modelo_de_precios_210425__ajustado_.xlsx” (Lista 0). Render y planos desde carpeta de insumos Xátiva.
-      </p>
+      <p class="footer-note">Precios y m² tomados de “_xativa_modelo_de_precios_210425__ajustado_.xlsx” (Lista 0).</p>
     </div>
   </section>
 
   <script>
-    const moduleButtons = document.querySelectorAll(".module-btn");
-    const typesA = document.getElementById("typesA");
-    const typesB = document.getElementById("typesB");
+    const moduleButtons = document.querySelectorAll('.module-btn');
+    const typesA = document.getElementById('typesA');
+    const typesB = document.getElementById('typesB');
 
     moduleButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const target = btn.dataset.module;
-        const showA = target === "A";
-        typesA.classList.toggle("active", showA);
-        typesB.classList.toggle("active", !showA);
-        window.scrollTo({ top: typesA.offsetTop - 80, behavior: "smooth" });
+      btn.addEventListener('click', () => {
+        const showA = btn.dataset.module === 'A';
+        typesA.classList.toggle('active', showA);
+        typesB.classList.toggle('active', !showA);
+        window.scrollTo({ top: typesA.offsetTop - 80, behavior: 'smooth' });
       });
     });
   </script>
