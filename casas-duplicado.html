@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Casas en venta - Xátiva</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <style>
     @font-face {
       font-family: 'Neutra Text Bold';
@@ -11,9 +12,9 @@
       font-weight: 700;
     }
     @font-face {
-      font-family: 'Neutra Text';
-      src: url('./fonts/neutra-text/neutra-text-bold-5871e1605afa2.otf') format('opentype');
-      font-weight: 700;
+      font-family: 'Neutra Text Alt';
+      src: url('./fonts/neutra-text/neutra-text-alt-587261020eccb.otf') format('opentype');
+      font-weight: 400;
     }
     @font-face {
       font-family: 'Sackers Gothic Std';
@@ -37,7 +38,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: "Neutra Text", Arial, sans-serif;
+      font-family: "Neutra Text Alt", Arial, sans-serif;
       color: var(--text-dark);
       background: var(--bg-white);
     }
@@ -83,31 +84,26 @@
     .section-title b { font-weight: 700; }
     .section-subtitle { text-align: left; color: var(--text-dark); margin-bottom: 34px; font-size: clamp(1rem, 1.5vw, 1.2rem); font-weight: 400; font-family: 'Neutra Text Alt', Arial, sans-serif; }
     .models-title { text-align: center; margin-bottom: 34px; font-size: clamp(1.8rem, 3.5vw, 2.3rem); letter-spacing: .03em; font-weight: 700; font-family: 'Neutra Text Bold', Arial, sans-serif; color: var(--text-dark); }
-    .step { text-align: center; color: var(--gold); margin-bottom: 18px; font-size: .96rem; letter-spacing: .03em; }
 
-    .modules-grid, .types-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-    .card { background: var(--surface); border: 1px solid var(--line); overflow: hidden; }
-    .card img { width: 100%; height: 230px; object-fit: cover; display: block; }
-    .card-body { padding: 20px; }
-    .card h3 { font-size: 1.8rem; margin-bottom: 4px; font-family: 'Sackers Gothic Std', Arial, sans-serif; }
-    .badge { color: var(--gold); margin-bottom: 10px; font-size: .95rem; }
-    .description { color: #4e545c; line-height: 1.5; margin-bottom: 16px; min-height: 50px; }
+    .models-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-bottom: 40px; }
+    .model-card { background: var(--surface); border: 1px solid var(--line); overflow: hidden; }
+    
+    .swiper { width: 100%; height: 300px; }
+    .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+    .swiper-button-next, .swiper-button-prev { color: var(--gold); }
+    .swiper-pagination-bullet-active { background: var(--gold); }
 
-    .types-wrap { margin-top: 26px; display: none; }
-    .types-wrap.active { display: block; }
-
-    .summary { background: var(--bg-white); }
-    .summary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-    .summary-card { border: 1px solid var(--line); background: #fff; }
-    .summary-card .body { padding: 20px; }
-    .summary-card h4 { font-size: 1.8rem; margin-bottom: 6px; font-family: 'Sackers Gothic Std', Arial, sans-serif; }
-    .price { font-size: 1.2rem; color: var(--gold); font-weight: 700; margin-bottom: 14px; }
-    .meta { list-style: none; display: grid; gap: 7px; color: #4e545c; font-size: .95rem; line-height: 1.4; }
+    .card-body { padding: 24px; }
+    .card-title { font-size: 1.6rem; margin-bottom: 12px; font-family: 'Sackers Gothic Std', Arial, sans-serif; }
+    .price { font-size: 1.1rem; color: var(--gold); font-weight: 700; margin-bottom: 18px; }
+    .specs { display: grid; gap: 8px; }
+    .spec-item { display: flex; gap: 8px; font-size: .95rem; line-height: 1.4; color: #4e545c; }
+    .spec-icon { color: var(--gold); font-weight: 700; }
     .footer-note { margin-top: 34px; font-size: .84rem; color: #6a6f76; text-align: center; }
 
     @media (max-width: 900px) {
-      .modules-grid, .types-grid, .summary-grid { grid-template-columns: 1fr; }
-      .card img { height: 210px; }
+      .models-grid { grid-template-columns: 1fr; }
+      .swiper { height: 250px; }
     }
   </style>
 </head>
@@ -143,42 +139,87 @@
 
       <h3 class="models-title">Modelos disponibles:</h3>
 
-      <div class="summary-grid">
-        <article class="summary-card">
-          <img src="https://via.placeholder.com/400x300?text=Casa+Cuarzo" alt="Casa Cuarzo">
-          <div class="body">
-            <h4>Casa Cuarzo</h4>
+      <div class="models-grid">
+        <!-- Casa Cuarzo -->
+        <article class="model-card">
+          <div class="swiper swiper-cuarzo">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://via.placeholder.com/600x300?text=Casa+Cuarzo+1" alt="Casa Cuarzo - Imagen 1"></div>
+              <div class="swiper-slide"><img src="https://via.placeholder.com/600x300?text=Casa+Cuarzo+2" alt="Casa Cuarzo - Imagen 2"></div>
+              <div class="swiper-slide"><img src="https://via.placeholder.com/600x300?text=Casa+Cuarzo+3" alt="Casa Cuarzo - Imagen 3"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Casa Cuarzo</h3>
             <div class="price">Desde $[PRECIO] MXN</div>
-            <ul class="meta">
-              <li>Metros totales: [M2]</li>
-              <li>Configuración: [RECAMARAS] recámaras + [BANOS] baños</li>
-              <li>Amenidades: [AMENIDADES]</li>
-              <li>Ubicación: [UBICACION]</li>
-            </ul>
+            <div class="specs">
+              <div class="spec-item"><span class="spec-icon">•</span> 3 Recámaras</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 6 Baños</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 3 Walk-in Closets</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 1 Lavandería</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 3 Cajones de estacionamiento</div>
+              <div class="spec-item"><span class="spec-icon">•</span> Roof Garden</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 323 m² construcción / 2 niveles + Roof Garden</div>
+            </div>
           </div>
         </article>
-        <article class="summary-card">
-          <img src="https://via.placeholder.com/400x300?text=Casa+Jade" alt="Casa Jade">
-          <div class="body">
-            <h4>Casa Jade</h4>
+
+        <!-- Casa Jade -->
+        <article class="model-card">
+          <div class="swiper swiper-jade">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://via.placeholder.com/600x300?text=Casa+Jade+1" alt="Casa Jade - Imagen 1"></div>
+              <div class="swiper-slide"><img src="https://via.placeholder.com/600x300?text=Casa+Jade+2" alt="Casa Jade - Imagen 2"></div>
+              <div class="swiper-slide"><img src="https://via.placeholder.com/600x300?text=Casa+Jade+3" alt="Casa Jade - Imagen 3"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Casa Jade</h3>
             <div class="price">Desde $[PRECIO] MXN</div>
-            <ul class="meta">
-              <li>Metros totales: [M2]</li>
-              <li>Configuración: [RECAMARAS] recámaras + [BANOS] baños</li>
-              <li>Amenidades: [AMENIDADES]</li>
-              <li>Ubicación: [UBICACION]</li>
-            </ul>
+            <div class="specs">
+              <div class="spec-item"><span class="spec-icon">•</span> 3 Recámaras</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 5 Baños</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 3 Walk-in Closets</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 1 Lavandería</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 3 Cajones de estacionamiento</div>
+              <div class="spec-item"><span class="spec-icon">•</span> Sótano</div>
+              <div class="spec-item"><span class="spec-icon">•</span> 287 m² construcción / 2 niveles + Sótano</div>
+            </div>
           </div>
         </article>
       </div>
 
-      <p class="footer-note">Información disponible. Reemplaza los valores entre corchetes [ ] con los datos reales de cada casa.</p>
+      <p class="footer-note">Imágenes de ejemplo. Reemplaza las URLs de placeholder con las imágenes reales de cada casa.</p>
     </div>
   </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Script básico listo para funcionalidad adicional
-    console.log('Página de casas exclusivas cargada');
+    // Inicializar slider Casa Cuarzo
+    new Swiper('.swiper-cuarzo', {
+      loop: true,
+      pagination: { el: '.swiper-cuarzo .swiper-pagination' },
+      navigation: {
+        nextEl: '.swiper-cuarzo .swiper-button-next',
+        prevEl: '.swiper-cuarzo .swiper-button-prev',
+      },
+    });
+
+    // Inicializar slider Casa Jade
+    new Swiper('.swiper-jade', {
+      loop: true,
+      pagination: { el: '.swiper-jade .swiper-pagination' },
+      navigation: {
+        nextEl: '.swiper-jade .swiper-button-next',
+        prevEl: '.swiper-jade .swiper-button-prev',
+      },
+    });
   </script>
 </body>
 </html>
