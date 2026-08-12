@@ -109,8 +109,26 @@
     .gallery-swiper .swiper-pagination { bottom: 20px; }
     .gallery-swiper .swiper-pagination-bullet-active { background: var(--gold); }
 
+    /* Amenities section */
+    .amenities-section { padding: 72px 0; background: var(--bg-white); }
+    .amenities-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+    .amenity-card { 
+      background: var(--surface); 
+      border: 1px solid var(--line); 
+      padding: 40px 24px; 
+      text-align: center; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
+      min-height: 250px;
+    }
+    .amenity-icon { font-size: 3.5rem; margin-bottom: 16px; }
+    .amenity-title { font-size: 1.4rem; color: var(--text-dark); font-family: 'Neutra Text Bold', Arial, sans-serif; font-weight: 700; letter-spacing: .02em; }
+
     @media (max-width: 900px) {
       .models-grid { grid-template-columns: 1fr; }
+      .amenities-grid { grid-template-columns: 1fr; }
       .swiper { height: 250px; }
     }
   </style>
@@ -222,6 +240,23 @@
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Amenidades Section -->
+  <section class="section amenities-section">
+    <div class="container">
+      <h2 class="section-title">AMENIDADES DE LOMAS DE JURIQUILLA</h2>
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon">🏀</div>
+          <h3 class="amenity-title">Canchas de Básquetbol</h3>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">⚽</div>
+          <h3 class="amenity-title">Canchas de Usos Mixtos</h3>
+        </div>
+      </div>
     </div>
   </section>
 
