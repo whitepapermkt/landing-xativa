@@ -177,6 +177,7 @@
     .section-title b { font-weight: 700; }
     .section-subtitle { text-align: left; color: var(--text-dark); margin-bottom: 18px; font-size: clamp(1.05rem, 1.45vw, 1.4rem); line-height: 1.5; letter-spacing: .01em; font-weight: 400; font-family: 'Neutra Text Alt', Arial, sans-serif; }
     .models-title { text-align: center; margin-bottom: 42px; font-size: clamp(1.8rem, 2.4vw, 2.5rem); letter-spacing: .04em; line-height: 1.15; font-weight: 700; font-family: 'Neutra Text Bold', Arial, sans-serif; color: var(--text-dark); }
+    .amenities-title span { display: block; }
 
     .models-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-bottom: 70px; }
     .model-card { background: var(--surface); border: 1px solid var(--line); overflow: hidden; padding-top: 0; }
@@ -412,7 +413,10 @@
         font-size: clamp(1rem, 4.2vw, 1.5rem);
         line-height: 1.12;
         letter-spacing: 0.04em;
-        max-width: 250px;
+        max-width: 270px;
+        display: block;
+      }
+      .amenities-title span {
         display: block;
       }
 
@@ -682,7 +686,7 @@
   <!-- Amenidades Section -->
   <section class="section amenities-section">
     <div class="container">
-      <h2 class="section-title amenities-title"><b>AMENIDADES</b> DE LOMAS DE JURIQUILLA</h2>
+      <h2 class="section-title amenities-title"><b>AMENIDADES</b><span>DE LOMAS</span><span>DE JURIQUILLA</span></h2>
       <div class="amenities-grid">
         <div class="amenity-card">
           <div class="amenity-icon">🏀</div>
