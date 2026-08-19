@@ -191,8 +191,153 @@
     .form-button:hover { background: #2d3238; }
 
     @media (max-width: 900px) {
-      .contact-wrapper { grid-template-columns: 1fr; }
-      .contact-image { min-height: 300px; }
+      .navbar .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 0 18px;
+      }
+
+      .logo {
+        width: 100%;
+        text-align: center;
+        font-size: clamp(2rem, 8vw, 2.8rem);
+      }
+
+      .menu {
+        justify-content: center;
+        gap: 10px 18px;
+      }
+
+      .menu a {
+        font-size: .9rem;
+      }
+
+      .hero {
+        min-height: 72vh;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        padding: 36px 0 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.3rem, 10vw, 4rem);
+        line-height: 0.96;
+        max-width: 90%;
+      }
+
+      .hero p {
+        font-size: clamp(0.95rem, 3.9vw, 1.15rem);
+        max-width: 100%;
+      }
+
+      .models-grid,
+      .amenities-grid,
+      .form-group {
+        grid-template-columns: 1fr;
+      }
+
+      .model-card .swiper {
+        height: 360px;
+      }
+
+      .card-body {
+        padding: 28px 22px;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+      }
+
+      .price {
+        font-size: 1.1rem;
+      }
+
+      .spec-item {
+        font-size: 1rem;
+      }
+
+      .gallery-swiper {
+        height: 420px;
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-image {
+        min-height: 300px;
+      }
+
+      .form-button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(92%, 100%);
+      }
+
+      .navbar .container {
+        min-height: auto;
+      }
+
+      .menu {
+        gap: 8px 12px;
+      }
+
+      .menu a {
+        font-size: .8rem;
+      }
+
+      .hero {
+        min-height: 64vh;
+      }
+
+      .hero-content {
+        padding-top: 26px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 11vw, 3rem);
+        max-width: 100%;
+      }
+
+      .hero p {
+        margin-bottom: 22px;
+      }
+
+      .btn-default {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .section {
+        padding: 52px 0;
+      }
+
+      .amenity-card {
+        min-height: 180px;
+        padding: 26px 18px;
+      }
+
+      .amenity-icon {
+        font-size: 2.7rem;
+      }
+
+      .amenity-title {
+        font-size: 1.05rem;
+      }
+
+      .gallery-swiper {
+        height: 320px;
+      }
+    }
   </style>
 </head>
 <body>
