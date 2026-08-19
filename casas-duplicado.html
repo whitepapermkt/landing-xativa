@@ -355,42 +355,49 @@
       </div>
     </div>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Inicializar slider Casa Cuarzo
-    new Swiper('.swiper-cuarzo', {
-      loop: true,
-      pagination: { el: '.swiper-cuarzo .swiper-pagination' },
-      navigation: {
-        nextEl: '.swiper-cuarzo .swiper-button-next',
-        prevEl: '.swiper-cuarzo .swiper-button-prev',
-      },
-      slidesPerView: 1,
-    });
+    if (window.Swiper) {
+      // Inicializar slider Casa Cuarzo
+      new Swiper('.swiper-cuarzo', {
+        loop: true,
+        pagination: { el: '.swiper-cuarzo .swiper-pagination', clickable: true },
+        navigation: {
+          nextEl: '.swiper-cuarzo .swiper-button-next',
+          prevEl: '.swiper-cuarzo .swiper-button-prev',
+        },
+        slidesPerView: 1,
+        allowTouchMove: true,
+      });
 
-    // Inicializar slider Casa Jade
-    new Swiper('.swiper-jade', {
-      loop: true,
-      pagination: { el: '.swiper-jade .swiper-pagination' },
-      navigation: {
-        nextEl: '.swiper-jade .swiper-button-next',
-        prevEl: '.swiper-jade .swiper-button-prev',
-      },
-      slidesPerView: 1,
-    });
+      // Inicializar slider Casa Jade
+      new Swiper('.swiper-jade', {
+        loop: true,
+        pagination: { el: '.swiper-jade .swiper-pagination', clickable: true },
+        navigation: {
+          nextEl: '.swiper-jade .swiper-button-next',
+          prevEl: '.swiper-jade .swiper-button-prev',
+        },
+        slidesPerView: 1,
+        allowTouchMove: true,
+      });
 
-    // Inicializar slider galería full-width
-    new Swiper('.gallery-swiper', {
-      loop: true,
-      pagination: { el: '.gallery-swiper .swiper-pagination', clickable: true },
-      navigation: {
-        nextEl: '.gallery-swiper .swiper-button-next',
-        prevEl: '.gallery-swiper .swiper-button-prev',
-      },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-    });
+      // Inicializar slider galería full-width
+      new Swiper('.gallery-swiper', {
+        loop: true,
+        pagination: { el: '.gallery-swiper .swiper-pagination', clickable: true },
+        navigation: {
+          nextEl: '.gallery-swiper .swiper-button-next',
+          prevEl: '.gallery-swiper .swiper-button-prev',
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        allowTouchMove: true,
+      });
+    }
   </script>
 </body>
 </html>
