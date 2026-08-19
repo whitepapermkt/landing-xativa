@@ -173,9 +173,9 @@
     .models-title { text-align: center; margin-bottom: 34px; font-size: clamp(1.8rem, 3.5vw, 2.3rem); letter-spacing: .03em; font-weight: 700; font-family: 'Neutra Text Bold', Arial, sans-serif; color: var(--text-dark); }
 
     .models-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-bottom: 40px; }
-    .model-card { background: var(--surface); border: 1px solid var(--line); overflow: hidden; padding-top: 18px; }
-    
-    .swiper { width: 100%; height: 450px; }
+    .model-card { background: var(--surface); border: 1px solid var(--line); overflow: hidden; padding-top: 0; }
+     
+    .swiper { width: 100%; height: 520px; }
     .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
     .swiper-button-next, 
     .swiper-button-prev { 
@@ -368,26 +368,26 @@
       }
 
       .hero {
-        min-height: 62vh;
+        min-height: 48vh;
       }
 
       .hero-content {
         max-width: 100%;
-        padding: 32px 0 24px;
+        padding: 18px 0 18px;
       }
 
       .hero h1 {
-        font-size: clamp(1.8rem, 7vw, 2.8rem);
-        line-height: 1.03;
+        font-size: clamp(1.9rem, 7vw, 2.9rem);
+        line-height: 1.08;
         max-width: 100%;
-        margin-bottom: 18px;
+        margin-bottom: 14px;
       }
 
       .hero p {
         font-size: clamp(0.86rem, 3vw, 1.03rem);
         max-width: 100%;
-        margin-bottom: 24px;
-        line-height: 1.5;
+        margin-bottom: 20px;
+        line-height: 1.45;
       }
 
       .models-grid,
@@ -402,17 +402,18 @@
 
       .amenities-title {
         font-size: clamp(1rem, 4.2vw, 1.5rem);
-        line-height: 1.1;
+        line-height: 1.12;
         letter-spacing: 0.04em;
         max-width: 250px;
+        display: block;
       }
 
       .model-card {
-        padding-top: 14px;
+        padding-top: 0;
       }
 
       .model-card .swiper {
-        height: 300px;
+        height: 390px;
       }
 
       .card-body {
@@ -445,8 +446,12 @@
         padding: 12px 16px;
       }
 
+      .gallery-section {
+        margin-top: 12px;
+      }
+
       .gallery-swiper {
-        height: 300px;
+        height: 460px;
       }
 
       .contact-wrapper {
@@ -480,23 +485,24 @@
       }
 
       .hero {
-        min-height: 50vh;
+        min-height: 42vh;
       }
 
       .hero-content {
-        padding-top: 22px;
+        padding-top: 16px;
       }
 
       .hero h1 {
-        font-size: clamp(1.42rem, 7vw, 2.18rem);
+        font-size: clamp(1.52rem, 7vw, 2.35rem);
         max-width: 100%;
-        line-height: 1.06;
+        line-height: 1.08;
         letter-spacing: -0.05em;
+        margin-bottom: 12px;
       }
 
       .hero p {
         margin-bottom: 18px;
-        line-height: 1.45;
+        line-height: 1.42;
       }
 
       .btn-default {
@@ -537,8 +543,12 @@
         line-height: 1.2;
       }
 
+      .gallery-section {
+        margin-top: 8px;
+      }
+
       .gallery-swiper {
-        height: 260px;
+        height: 420px;
       }
     }
   </style>
@@ -640,7 +650,6 @@
         </article>
       </div>
 
-      <p class="footer-note">Imágenes de ejemplo. Reemplaza las URLs de placeholder con las imágenes reales de cada casa.</p>
     </div>
   </section>
 
