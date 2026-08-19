@@ -334,13 +334,16 @@
     .amenities-section { padding: 72px 0; background: var(--bg-white); }
     .amenities-title {
       font-size: clamp(2.2rem, 3.4vw, 3.6rem);
-      line-height: 0.95;
+      line-height: 1;
       letter-spacing: -0.05em;
       font-weight: 300;
       font-family: "Neutra", sans-serif;
       text-transform: uppercase;
       white-space: normal;
       color: var(--text-dark);
+    }
+    .amenities-title span {
+      display: inline;
     }
     .amenities-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px; }
     .amenity-card { 
