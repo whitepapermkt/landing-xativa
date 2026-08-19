@@ -134,7 +134,10 @@
       font-weight: 700;
       max-width: 560px;
     }
-    .hero h1 span {
+    .hero h1 span:first-child {
+      display: block;
+    }
+    .hero h1 span:last-child {
       display: block;
       margin-top: 0.16em;
     }
@@ -582,7 +585,7 @@
     <img class="hero-bg" src="./hero-casas-main.jpg" alt="Vista principal Xátiva">
     <div class="container">
       <div class="hero-content">
-        <h1>CASAS CON<br><span style="display:block; margin-top: 0.16em;">DISEÑO EXCLUSIVO</span></h1>
+        <h1><span>CASAS CON</span><span style="display:block; margin-top: 0.16em;">DISEÑO EXCLUSIVO</span></h1>
         <p>Disfruta de un hogar creado con arquitectura contemporánea y espacios funcionales en la zona de Lomas de Juriquilla.</p>
         <a class="btn-default" href="#tipologias">Más información</a>
       </div>
