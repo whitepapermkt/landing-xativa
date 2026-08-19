@@ -37,6 +37,10 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: "Neutra Text Alt", Arial, sans-serif;
       color: var(--text-dark);
@@ -182,7 +186,9 @@
     .models-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-bottom: 70px; }
     .model-card { background: var(--surface); border: 1px solid var(--line); overflow: hidden; padding-top: 0; }
      
-    .swiper { width: 100%; height: 520px; }
+    .swiper { width: 100%; height: 520px; max-width: 100vw; overflow: hidden; }
+    .swiper-wrapper { max-width: 100%; }
+    .swiper-slide { max-width: 100%; }
     .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
     .swiper-button-next, 
     .swiper-button-prev { 
@@ -191,7 +197,7 @@
       height: 50px !important;
       background: rgba(255,255,255,0.85) !important;
       border-radius: 50% !important;
-      display: flex !important;
+      display: none !important;
       align-items: center !important;
       justify-content: center !important;
       top: 50% !important;
@@ -212,7 +218,9 @@
     .swiper-cuarzo .swiper-button-next,
     .swiper-cuarzo .swiper-button-prev,
     .swiper-jade .swiper-button-next,
-    .swiper-jade .swiper-button-prev {
+    .swiper-jade .swiper-button-prev,
+    .gallery-swiper .swiper-button-next,
+    .gallery-swiper .swiper-button-prev {
       display: none !important;
     }
     .swiper-pagination-bullet-active { background: var(--gold) !important; }
@@ -466,6 +474,13 @@
 
       .gallery-section {
         margin-top: 12px;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev,
+      .gallery-swiper .swiper-button-next,
+      .gallery-swiper .swiper-button-prev {
+        display: none !important;
       }
 
       .gallery-swiper {
