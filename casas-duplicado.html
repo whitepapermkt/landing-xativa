@@ -123,8 +123,28 @@
 
     .card-body { padding: 40px; }
     .card-title { font-size: 1.8rem; margin-bottom: 16px; font-family: 'Sackers Gothic Std', Arial, sans-serif; }
-    .price { font-size: 1.3rem; color: var(--gold); font-weight: 700; margin-bottom: 24px; }
+    .price { font-size: 1.3rem; color: var(--gold); font-weight: 700; margin-bottom: 18px; }
+    .price strong { font-weight: 700; }
     .specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 42px; }
+    .cta-button {
+      display: inline-block;
+      padding: 14px 26px;
+      margin-top: 26px;
+      background: var(--gold);
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      font-family: 'Neutra Text Bold', Arial, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: .2s ease;
+      cursor: pointer;
+    }
+    .cta-button:hover {
+      background: #a67f45;
+      border-color: #a67f45;
+    }
     .spec-item { display: flex; gap: 12px; font-size: clamp(1.4rem, 1.8vw, 2.1rem); line-height: 1.25; color: #2a2d31; font-family: 'Neutra Text Alt', Arial, sans-serif; align-items: flex-start; }
     .spec-icon { color: #21262d; font-weight: 700; font-size: 1.05em; margin-top: 0.1em; }
     .footer-note { margin-top: 34px; font-size: .84rem; color: #6a6f76; text-align: center; }
@@ -158,6 +178,7 @@
     /* Contact Form Section */
     .contact-section { padding: 0; background: var(--bg-white); margin-top: 60px; }
     .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    #contacto { scroll-margin-top: 100px; }
     .contact-image { background: linear-gradient(135deg, #d4a574 0%, #a67c52 100%); position: relative; overflow: hidden; }
     .contact-image img { width: 100%; height: 100%; object-fit: cover; }
     .contact-form { background: #f8f6f1; padding: clamp(40px, 6vw, 60px); display: flex; flex-direction: column; justify-content: center; }
@@ -448,7 +469,7 @@
           </div>
           <div class="card-body">
             <h3 class="card-title">Casa Cuarzo</h3>
-            <div class="price">Desde $[PRECIO] MXN</div>
+            <div class="price"><strong>$6.45 MXN</strong></div>
             <div class="specs">
               <div class="spec-item"><span class="spec-icon">•</span> 3 Recámaras</div>
               <div class="spec-item"><span class="spec-icon">•</span> 6 Baños</div>
@@ -458,6 +479,7 @@
               <div class="spec-item"><span class="spec-icon">•</span> Roof Garden</div>
               <div class="spec-item"><span class="spec-icon">•</span> 323 m² construcción / 2 niveles + Roof Garden</div>
             </div>
+            <a class="cta-button" href="#contacto">Cotizar</a>
           </div>
         </article>
 
@@ -475,7 +497,7 @@
           </div>
           <div class="card-body">
             <h3 class="card-title">Casa Jade</h3>
-            <div class="price">Desde $[PRECIO] MXN</div>
+            <div class="price"><strong>$6.45 MXN</strong></div>
             <div class="specs">
               <div class="spec-item"><span class="spec-icon">•</span> 3 Recámaras</div>
               <div class="spec-item"><span class="spec-icon">•</span> 5 Baños</div>
@@ -485,6 +507,7 @@
               <div class="spec-item"><span class="spec-icon">•</span> Sótano</div>
               <div class="spec-item"><span class="spec-icon">•</span> 287 m² construcción / 2 niveles + Sótano</div>
             </div>
+            <a class="cta-button" href="#contacto">Cotizar</a>
           </div>
         </article>
       </div>
@@ -537,7 +560,7 @@
   </section>
 
   <!-- Contact Form Section -->
-  <section class="contact-section">
+  <section id="contacto" class="contact-section">
     <div class="contact-wrapper">
       <div class="contact-image">
         <img src="./images/contact-image.jpg" alt="Pareja en Xátiva">
