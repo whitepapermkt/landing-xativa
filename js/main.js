@@ -75,17 +75,6 @@ galleryTimer = setTimeout(() => {
   updateGallery();
 }, 6000);
 
-// Video modal
-document.getElementById('videoBtn').addEventListener('click', () => {
-  document.getElementById('videoModal').classList.add('active');
-});
-
-document.getElementById('videoModal').addEventListener('click', (e) => {
-  if (e.target.id === 'videoModal') {
-    document.getElementById('videoModal').classList.remove('active');
-  }
-});
-
 // Navbar toggle
 document.querySelector('.navbar__toggle').addEventListener('click', () => {
   const nav = document.querySelector('.navbar__nav');

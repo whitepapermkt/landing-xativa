@@ -47,23 +47,6 @@ if (slides.length > 0) {
   }, 6000);
 }
 
-// Video modal
-const videoBtn = document.getElementById('videoBtn');
-if (videoBtn) {
-  videoBtn.addEventListener('click', () => {
-    document.getElementById('videoModal').classList.add('active');
-  });
-}
-
-const videoModal = document.getElementById('videoModal');
-if (videoModal) {
-  videoModal.addEventListener('click', (e) => {
-    if (e.target.id === 'videoModal') {
-      document.getElementById('videoModal').classList.remove('active');
-    }
-  });
-}
-
 // Navbar toggle
 const navbarToggle = document.querySelector('.navbar__toggle');
 if (navbarToggle) {
