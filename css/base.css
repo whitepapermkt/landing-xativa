@@ -531,7 +531,7 @@ button {
   background-color: transparent;
   border-radius: 8px;
   margin-left: -30px;
-  margin-top: -60px;
+  margin-top: -20px;
 }
 
 .contact__form button.btn-outline {
@@ -585,7 +585,7 @@ button {
   gap: 20px;
   align-items: flex-start;
   border-top: 1px solid var(--gold);
-  margin-top: -40px;
+  margin-top: 0px;
 }
 
 .contact__hr {
