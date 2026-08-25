@@ -300,6 +300,18 @@ button {
   color: var(--dark);
 }
 
+/* Hero button variant - filled dark background */
+.hero .btn-outline {
+  background-color: var(--dark);
+  border: 1px solid var(--dark);
+  color: var(--cream);
+}
+
+.hero .btn-outline:hover {
+  background-color: #1a1f28;
+  border-color: #1a1f28;
+}
+
 .btn-outline--dark {
   border-color: var(--dark);
   color: var(--dark);
