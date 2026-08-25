@@ -483,6 +483,7 @@ button {
   display: flex;
   gap: 60px;
   margin-bottom: 60px;
+  flex-direction: row-reverse;
 }
 
 .contact__form {
@@ -491,6 +492,10 @@ button {
   flex-direction: column;
   gap: 16px;
   width: 496px;
+  border: 2px solid var(--gold);
+  padding: 40px;
+  background-color: rgba(188, 147, 94, 0.08);
+  border-radius: 8px;
 }
 
 .contact__form button.btn-outline {
