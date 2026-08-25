@@ -700,13 +700,16 @@ button {
   .contact__info {
     padding-top: 20px;
     margin-top: 0;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
+    justify-content: space-between;
   }
 
   .contact__cols {
-    flex-direction: column;
+    flex-direction: row;
     gap: 30px;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .contact__hr {
