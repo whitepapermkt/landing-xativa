@@ -479,7 +479,7 @@ button {
   color: var(--dark);
   line-height: 1.0;
   margin-bottom: 40px;
-  margin-top: 20px;
+  margin-top: -80px;
 }
 
 .contact__body {
@@ -518,7 +518,6 @@ button {
   flex-direction: column;
   gap: 40px;
   flex: 1;
-  margin-top: -120px;
 }
 
 .contact__form {
@@ -532,6 +531,7 @@ button {
   background-color: transparent;
   border-radius: 8px;
   margin-left: -30px;
+  margin-top: -60px;
 }
 
 .contact__form button.btn-outline {
@@ -585,6 +585,7 @@ button {
   gap: 20px;
   align-items: flex-start;
   border-top: 1px solid var(--gold);
+  margin-top: -40px;
 }
 
 .contact__hr {
