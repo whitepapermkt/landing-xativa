@@ -484,6 +484,7 @@ button {
   gap: 60px;
   margin-bottom: 60px;
   position: relative;
+  flex-direction: row-reverse;
 }
 
 .contact__body::before {
