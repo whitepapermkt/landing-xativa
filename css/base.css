@@ -452,7 +452,7 @@ button {
 /* Contact Section */
 .contact {
   background-color: var(--cream);
-  padding: 60px 40px;
+  padding: 60px 40px 0px;
 }
 
 .contact__top {
@@ -484,7 +484,7 @@ button {
 .contact__body {
   display: flex;
   gap: 0px;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
   position: relative;
   align-items: flex-start;
 }
