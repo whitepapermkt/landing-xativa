@@ -602,6 +602,8 @@ button {
 .contact__cols {
   display: flex;
   gap: 120px;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .contact__cols h4 {
