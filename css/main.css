@@ -38,6 +38,7 @@
 .models__header {
   max-width: 1280px;
   margin: 0 auto 60px;
+  text-align: center;
 }
 
 .models__title {
