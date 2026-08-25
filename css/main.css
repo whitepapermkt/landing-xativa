@@ -19,6 +19,7 @@
 .intro p {
   font-family: 'Fahkwang', sans-serif;
   font-size: 17px;
+  font-weight: 400;
   color: var(--dark);
   max-width: 655px;
   margin: 0 auto;
@@ -131,8 +132,8 @@
 }
 
 .model-card__arrow svg {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   fill: var(--dark);
 }
 

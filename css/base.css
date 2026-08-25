@@ -62,7 +62,6 @@ body {
   background-color: var(--white);
   color: var(--dark);
   line-height: 1.6;
-  lang: es;
 }
 
 a {
@@ -351,7 +350,7 @@ button {
 
 .floating__btn--wa {
   background-color: #25d366;
-  margin-top: 30px;
+  margin-top: 36px;
 }
 
 .floating__btn--wa svg {
@@ -376,6 +375,10 @@ button {
   background-color: var(--dark);
   padding: 60px 20px;
   text-align: center;
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .amenities__title {
@@ -390,7 +393,7 @@ button {
 .amenities__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
+  gap: 130px;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -490,7 +493,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 496px;
+  width: 496px;
 }
 
 .contact__form button.btn-outline {
@@ -500,6 +503,7 @@ button {
 .contact__lead {
   font-family: 'Fahkwang', sans-serif;
   font-size: 17px;
+  font-weight: 400;
   color: var(--dark);
   max-width: 349px;
   margin-bottom: 20px;
@@ -512,6 +516,7 @@ button {
   background-color: transparent;
   font-family: 'Fahkwang', sans-serif;
   font-size: 17px;
+  font-weight: 400;
   color: var(--dark);
   border-radius: 4px;
   box-sizing: border-box;
@@ -519,11 +524,12 @@ button {
 
 .contact__form input::placeholder {
   color: var(--gold);
+  font-weight: 400;
 }
 
 .contact__row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 233px 233px;
   gap: 12px;
 }
 
