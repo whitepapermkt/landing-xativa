@@ -460,14 +460,15 @@ button {
   gap: 60px;
   margin-bottom: 60px;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .contact__art {
-  flex: 0 0 640px;
+  flex: 0 0 auto;
 }
 
 .contact__art img {
-  width: 100%;
+  width: 180px;
   opacity: 0.9;
 }
 
@@ -487,10 +488,17 @@ button {
   flex-direction: row-reverse;
 }
 
+.contact__left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
 .contact__body::before {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -60px;
   left: 0;
   width: 0;
   height: 0;
@@ -503,7 +511,7 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 0;
+  bottom: -100px;
   width: 8px;
   background-color: var(--dark);
 }
