@@ -184,15 +184,6 @@ button {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.hero__diamond {
-  position: absolute;
-  right: 20px;
-  top: 189px;
-  width: 186px;
-  height: 186px;
-  z-index: 10;
-}
-
 .hero__content {
   position: absolute;
   top: 0;
@@ -243,11 +234,6 @@ button {
   .hero__title {
     font-size: 50px;
   }
-
-  .hero__diamond {
-    width: 140px;
-    height: 140px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -269,10 +255,6 @@ button {
   .hero__text {
     font-size: 15px;
     max-width: 100%;
-  }
-
-  .hero__diamond {
-    display: none;
   }
 }
 
