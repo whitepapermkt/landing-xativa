@@ -170,7 +170,7 @@
 
 .model-card__btn {
   padding: 0 16px;
-  height: 30px;
+  height: 40px;
   font-family: 'Fahkwang', sans-serif;
   font-size: 15px;
   border-radius: 4px;
@@ -184,7 +184,7 @@
 
 .model-card__btn--info {
   width: 167px;
-  height: 30px;
+  height: 40px;
   background-color: var(--dark);
   color: var(--cream);
 }
@@ -195,7 +195,7 @@
 
 .model-card__btn--quote {
   width: 122px;
-  height: 29px;
+  height: 40px;
   background-color: var(--gold);
   color: var(--cream);
 }
