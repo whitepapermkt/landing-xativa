@@ -29,14 +29,20 @@
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 16px;
+  line-height: 1.0;
 }
 
 .house-sheet__area {
   font-family: 'Fahkwang', sans-serif;
   font-size: 32px;
-  font-weight: 700;
-  color: var(--gold);
+  font-weight: 300;
+  color: var(--dark);
   margin-bottom: 32px;
+}
+
+.house-sheet__area:first-of-type {
+  color: var(--gold);
+  font-weight: 700;
 }
 
 .house-sheet__features {
