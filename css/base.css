@@ -518,6 +518,7 @@ button {
   flex-direction: column;
   gap: 40px;
   flex: 1;
+  margin-top: -60px;
 }
 
 .contact__form {
