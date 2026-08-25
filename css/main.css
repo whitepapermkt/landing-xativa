@@ -10,10 +10,14 @@
 .intro h2 {
   font-family: 'Neutra Text', serif;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--dark);
   margin-bottom: 16px;
   line-height: 1.0;
+}
+
+.intro__brand {
+  font-weight: 700;
 }
 
 .intro p {
