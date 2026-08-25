@@ -125,27 +125,54 @@
 }
 
 @media (max-width: 768px) {
+  .back-link {
+    padding: 0 20px;
+    font-size: 15px;
+  }
+
   .house-sheet {
     padding: 0 20px;
+    gap: 30px;
+    margin: 30px auto 40px;
   }
 
   .house-sheet__name {
-    font-size: 36px;
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .house-sheet__area {
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
   .house-sheet__features {
     grid-template-columns: 1fr;
+    gap: 16px 20px;
+  }
+
+  .house-sheet__feature {
+    font-size: 15px;
   }
 
   .plan-row {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+  }
+
+  .plan-item {
+    gap: 10px;
+  }
+
+  .plan-item__label {
+    font-size: 18px;
   }
 
   .plan-item__image {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 280px;
     aspect-ratio: 1;
   }
 }
