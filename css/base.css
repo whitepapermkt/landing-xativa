@@ -525,9 +525,9 @@ button {
   flex-direction: column;
   gap: 16px;
   width: 496px;
-  border: 2px solid var(--gold);
+  border: none;
   padding: 80px 40px 40px;
-  background-color: rgba(188, 147, 94, 0.08);
+  background-color: transparent;
   border-radius: 8px;
   margin-left: 40px;
 }
