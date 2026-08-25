@@ -493,17 +493,18 @@ button {
   flex-direction: column;
   gap: 40px;
   position: relative;
+  flex: 0 0 500px;
 }
 
 .contact__body::before {
   content: '';
   position: absolute;
-  bottom: -60px;
+  bottom: -80px;
   left: 0;
   width: 0;
   height: 0;
-  border-left: 100px solid var(--gold);
-  border-bottom: 100px solid transparent;
+  border-left: 120px solid var(--gold);
+  border-bottom: 120px solid transparent;
 }
 
 .contact__body::after {
@@ -511,8 +512,8 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  bottom: -100px;
-  width: 8px;
+  height: 680px;
+  width: 12px;
   background-color: var(--dark);
 }
 
@@ -566,7 +567,7 @@ button {
 }
 
 .contact__photo {
-  width: 475px;
+  width: 500px;
   height: 680px;
   object-fit: cover;
   border-radius: 4px;
