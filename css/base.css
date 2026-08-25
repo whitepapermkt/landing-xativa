@@ -202,6 +202,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   padding-left: 80px;
   z-index: 5;
 }
@@ -280,9 +281,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 192px;
-  min-height: 46px;
   padding: 0 16px;
+  min-height: 46px;
   border: 1px solid var(--cream);
   background-color: transparent;
   color: var(--cream);
@@ -305,6 +305,9 @@ button {
   background-color: var(--dark);
   border: 1px solid var(--dark);
   color: var(--cream);
+  padding: 10px 20px;
+  min-height: auto;
+  height: auto;
 }
 
 .hero .btn-outline:hover {
