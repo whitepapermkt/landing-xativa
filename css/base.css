@@ -529,7 +529,7 @@ button {
   padding: 80px 40px 40px;
   background-color: transparent;
   border-radius: 8px;
-  margin-left: 40px;
+  margin-left: 0px;
 }
 
 .contact__form button.btn-outline {
