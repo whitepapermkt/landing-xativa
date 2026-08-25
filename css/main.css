@@ -101,11 +101,37 @@
   text-align: center;
 }
 
+.model-card__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 0;
+  background-color: #f9f9f9;
+  flex: 1;
+}
+
+.model-card__arrow {
+  width: 25px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.model-card__arrow svg {
+  width: 25px;
+  height: 25px;
+  fill: var(--dark);
+}
+
 .model-card__image {
-  position: relative;
   width: 100%;
   height: 350px;
-  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,24 +142,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.model-card__arrows {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  padding: 0 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.model-card__arrow {
-  pointer-events: auto;
 }
 
 .model-card__arrow {
