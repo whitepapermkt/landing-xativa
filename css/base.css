@@ -475,11 +475,15 @@ button {
 .contact__title {
   font-family: 'Neutra Text', serif;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 300;
   color: var(--dark);
   line-height: 1.0;
   margin-bottom: 40px;
   margin-top: 40px;
+}
+
+.contact__title--bold {
+  font-weight: 700;
 }
 
 .contact__body {
