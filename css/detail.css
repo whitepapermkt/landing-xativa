@@ -7,6 +7,7 @@
   display: inline-block;
   font-family: 'Fahkwang', sans-serif;
   font-size: 17px;
+  font-weight: 400;
   color: var(--dark);
   text-decoration: underline;
 }
@@ -54,6 +55,7 @@
 .house-sheet__feature {
   font-family: 'Fahkwang', sans-serif;
   font-size: 17px;
+  font-weight: 400;
   color: var(--dark);
   line-height: 1.5;
 }
