@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Cuarzo | Xâtiva</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="navbar__logo" href="index.html"><img src="assets/img/logo-xativa.png" alt="Xâtiva"></a>
+    <nav class="navbar__nav">
+      <a href="index.html" class="navbar__link">Inicio</a>
+      <a href="index.html#modelos" class="navbar__link navbar__link--active">Casas en venta</a>
+      <a href="index.html#amenidades" class="navbar__link">Amenidades</a>
+      <a href="index.html#ubicacion" class="navbar__link">Ubicación</a>
+      <a href="index.html#contacto" class="navbar__link">Contacto</a>
+    </nav>
+    <button class="navbar__toggle" aria-label="Menú">≡</button>
+  </header>
+
+  <section class="hero">
+    <img class="hero__bg" src="assets/img/hero-bg.jpg" alt="">
+    <div class="hero__overlay"></div>
+    <img class="hero__diamond" src="assets/img/logo-diamond.png" alt="">
+    <div class="hero__content">
+      <h1 class="hero__title">CASAS CON DISEÑO EXCLUSIVO</h1>
+      <p class="hero__text">Disfruta de un hogar creado con arquitectura contemporánea y espacios funcionales en la zona de Lomas de Juriquilla.</p>
+      <a class="btn-outline" href="#contacto">Más información</a>
+      <button class="hero__video-btn" id="videoBtn">
+        <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="21" cy="21" r="20" stroke="currentColor" stroke-width="2"/>
+          <polygon points="16,13 16,29 28,21" fill="currentColor"/>
+        </svg>
+        Ver video
+      </button>
+    </div>
+    <div class="hero__scroll">Scroll to explore <span>↓</span></div>
+  </section>
+
+  <section class="intro">
+    <h2>XÂTIVA ES TU ESPACIO</h2>
+    <p>Contamos con tres opciones de vivienda de 3 recámaras desde $5.94 MXN.</p>
+  </section>
+
+  <a class="back-link" href="index.html">← Atrás</a>
+
+  <section class="house-sheet">
+    <div class="house-sheet__info">
+      <h2 class="house-sheet__name">Casa Cuarzo</h2>
+      <p class="house-sheet__area">$6.45 MXN</p>
+      <p class="house-sheet__area">323m²</p>
+      <div class="house-sheet__features">
+        <div class="house-sheet__feature">3 Recámaras</div>
+        <div class="house-sheet__feature">Lavandería</div>
+        <div class="house-sheet__feature">3 Walk-in Closet</div>
+        <div class="house-sheet__feature">3 Cajones</div>
+        <div class="house-sheet__feature">6 Baños</div>
+        <div class="house-sheet__feature">Roof Garden</div>
+      </div>
+    </div>
+    <div class="house-sheet__plans">
+      <div class="plan-row">
+        <div class="plan-item">
+          <h3 class="plan-item__label">Roof Garden</h3>
+          <div class="plan-item__image"><img src="assets/img/plan-cuarzo-roof.png" alt="Roof Garden"></div>
+        </div>
+        <div class="plan-item">
+          <h3 class="plan-item__label">Planta Alta</h3>
+          <div class="plan-item__image"><img src="assets/img/plan-cuarzo-alta.png" alt="Planta Alta"></div>
+        </div>
+        <div class="plan-item">
+          <h3 class="plan-item__label">Planta Baja</h3>
+          <div class="plan-item__image"><img src="assets/img/plan-cuarzo-baja.png" alt="Planta Baja"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="gallery__slide active">
+      <img class="gallery__image" src="assets/img/gallery-cuarzo-rooftop.jpg" alt="Cuarzo - Rooftop">
+    </div>
+    <div class="gallery__gradient"></div>
+    <div class="gallery__chip">
+      <div class="gallery__chip-text">Casa Cuarzo</div>
+    </div>
+    <div class="gallery__caption">Rooftop</div>
+    <div class="gallery__controls">
+      <button class="gallery__arrow js-gallery-prev">‹</button>
+      <button class="gallery__arrow js-gallery-next">›</button>
+    </div>
+  </section>
+
+  <section class="amenities" id="amenidades">
+    <h2 class="amenities__title">AMENIDADES DE LOMAS DE JURIQUILLA</h2>
+    <div class="amenities__grid">
+      <div class="amenity">
+        <div class="amenity__circle">
+          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="15" r="5" fill="currentColor"/>
+            <rect x="15" y="20" width="20" height="18" rx="4" fill="currentColor"/>
+          </svg>
+        </div>
+        <p>Canchas de<br>Básquetbol</p>
+      </div>
+      <div class="amenity">
+        <div class="amenity__circle">
+          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="15" width="30" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="25" y1="15" x2="25" y2="35" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="25" x2="40" y2="25" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <p>Canchas de<br>Usos Mixtos</p>
+      </div>
+      <div class="amenity">
+        <div class="amenity__circle">
+          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="25" r="3" fill="currentColor"/>
+            <circle cx="25" cy="25" r="3" fill="currentColor"/>
+            <circle cx="35" cy="25" r="3" fill="currentColor"/>
+            <path d="M25 10 L30 30 L20 30 Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <p>Ciclopista</p>
+      </div>
+      <div class="amenity">
+        <div class="amenity__circle">
+          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="4" fill="currentColor"/>
+            <circle cx="30" cy="30" r="4" fill="currentColor"/>
+            <path d="M24 16 L26 34" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <p>Área<br>de Juegos</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="contact__top">
+      <div class="contact__art">
+        <img src="assets/img/logo-diamond.png" alt="">
+      </div>
+      <div>
+        <h2 class="contact__title">TU FUTURO RESIDENCIAL<br>ESTÁ EN XÂTIVA</h2>
+      </div>
+    </div>
+    <div class="contact__body">
+      <form class="contact__form">
+        <p class="contact__lead">Para más información déjanos tus datos y un asesor te contará en breve.</p>
+        <input type="text" placeholder="Nombre*" required>
+        <div class="contact__row">
+          <input type="email" placeholder="Correo*" required>
+          <input type="tel" placeholder="Teléfono*" required>
+        </div>
+        <input type="text" placeholder="Mensaje">
+        <button class="btn-outline btn-outline--dark" type="submit">Enviar</button>
+      </form>
+      <img class="contact__photo" src="assets/img/contact-photo.jpg" alt="">
+    </div>
+    <div class="contact__info" id="ubicacion">
+      <hr class="contact__hr">
+      <div class="contact__cols">
+        <div>
+          <h4>Ubicación</h4>
+          <p>Lomas de Juriquilla,<br>Querétaro</p>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <p>55 1234 5678</p>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <div class="contact__social">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5c-.489-.07-2.267-.2-4.555-.2-4.51 0-7.614 2.826-7.614 8.029v1.971z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"></footer>
+
+  <div class="floating">
+    <a class="floating__btn floating__btn--tel" href="tel:5512345678" aria-label="Llamar">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9.109C3 5.505 5.468 2.5 8.948 2.5c1.203 0 2.357.36 3.322 1.037.513.363.847.981.847 1.682 0 .701-.334 1.319-.847 1.682-.966.677-2.12 1.037-3.322 1.037H7.586c-.64 0-.962.323-.962.963v7.762c0 .64.322.963.962.963h1.262c1.202 0 2.356.36 3.322 1.037.513.363.847.981.847 1.682 0 .701-.334 1.319-.847 1.682-.965.677-2.119 1.037-3.322 1.037C5.468 21.5 3 18.495 3 14.891V9.109z"/></svg>
+    </a>
+    <a class="floating__btn floating__btn--mail" href="#contacto" aria-label="Escribir">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V6zm2 0l7 4.5L19 6M5 8l6.5 4 6.5-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+    </a>
+    <a class="floating__btn floating__btn--wa" href="https://wa.me/525512345678" aria-label="WhatsApp" target="_blank">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.77 1.148l-.335.17-.347.085 1.333 3.911c.36-1.128 1.212-2.1 2.32-2.637.957-.44 2.053-.464 3.087-.13 1.034.333 1.926 1.04 2.526 1.95.6.91.856 2.03.718 3.125-.138 1.094-.652 2.098-1.456 2.877-.804.78-1.916 1.34-3.114 1.489-1.198.15-2.428-.088-3.452-.683-1.025-.595-1.762-1.571-2.097-2.706l-3.911-1.333.085.347.17.335A9.87 9.87 0 008.05 19.92c1.329 0 2.654-.321 3.878-.936 1.223-.615 2.27-1.489 3.084-2.563.813-1.074 1.393-2.316 1.707-3.635.314-1.319.354-2.684.118-4.022-.237-1.338-.803-2.618-1.662-3.71-.859-1.09-1.98-1.97-3.237-2.563-1.257-.593-2.656-.912-4.08-.912zm0 0"/></svg>
+    </a>
+  </div>
+
+  <div class="modal" id="videoModal">
+    <div class="modal__content">
+      <button class="modal__close" onclick="document.getElementById('videoModal').classList.remove('active')">✕</button>
+      <video controls autoplay>
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script src="js/detail.js"></script>
+</body>
+</html>

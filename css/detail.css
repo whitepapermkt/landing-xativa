@@ -1,0 +1,143 @@
+/* Detail page specific styles */
+
+.back-link {
+  max-width: 1280px;
+  margin: 40px auto 0;
+  padding: 0 40px;
+  display: inline-block;
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 17px;
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+.house-sheet {
+  max-width: 1280px;
+  margin: 40px auto 60px;
+  padding: 0 40px;
+  display: flex;
+  gap: 60px;
+}
+
+.house-sheet__info {
+  flex: 1;
+}
+
+.house-sheet__name {
+  font-family: 'Neutra Text', serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.house-sheet__area {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.house-sheet__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 40px;
+}
+
+.house-sheet__feature {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 17px;
+  color: var(--dark);
+  line-height: 1.5;
+}
+
+.house-sheet__plans {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.plan-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.plan-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.plan-item__label {
+  font-family: 'Neutra Text', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--dark);
+  text-align: center;
+}
+
+.plan-item__image {
+  width: 395px;
+  height: 395px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .house-sheet {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .plan-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .plan-item__image {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .house-sheet {
+    padding: 0 20px;
+  }
+
+  .house-sheet__name {
+    font-size: 36px;
+  }
+
+  .house-sheet__features {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-item__image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    aspect-ratio: 1;
+  }
+}
