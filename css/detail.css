@@ -264,13 +264,15 @@
   }
 
   .plan-row {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   .plan-item__image {
     width: 350px;
     height: 350px;
+    flex-shrink: 0;
   }
 }
 
