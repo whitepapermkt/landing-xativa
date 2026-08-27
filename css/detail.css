@@ -191,15 +191,6 @@
   font-weight: 300;
 }
 
-.gallery__chip-text {
-  font-family: 'Neutra Text', serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--dark);
-  text-align: center;
-  line-height: 1.0;
-}
-
 .gallery__caption {
   position: absolute;
   bottom: 70px;
@@ -284,9 +275,23 @@
 }
 
 @media (max-width: 768px) {
+  .intro {
+    padding: 40px 20px;
+  }
+
+  .intro h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .intro p {
+    font-size: 15px;
+  }
+
   .back-link {
     padding: 0 20px;
     font-size: 15px;
+    margin: 20px 20px 0 auto;
   }
 
   .house-sheet {
@@ -312,6 +317,34 @@
 
   .house-sheet__feature {
     font-size: 15px;
+  }
+
+  .gallery {
+    height: 350px;
+  }
+
+  .gallery__gradient {
+    height: 150px;
+  }
+
+  .gallery__chip {
+    display: none;
+  }
+
+  .gallery__caption {
+    bottom: 40px;
+    left: 20px;
+    font-size: 18px;
+  }
+
+  .gallery__controls {
+    bottom: 15px;
+    right: 20px;
+    width: 80px;
+  }
+
+  .gallery__arrow {
+    font-size: 18px;
   }
 
   .plan-row {

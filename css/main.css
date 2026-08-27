@@ -328,6 +328,7 @@
 
   .intro h2 {
     font-size: 36px;
+    margin-bottom: 12px;
   }
 
   .intro p {
@@ -338,9 +339,13 @@
     padding: 40px 20px;
   }
 
+  .models__header {
+    margin-bottom: 30px;
+  }
+
   .models__title {
     font-size: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .models__grid {
@@ -353,16 +358,41 @@
     width: 100%;
   }
 
+  .model-card__header {
+    padding: 12px;
+  }
+
   .model-card__name {
     font-size: 24px;
+    margin-bottom: 4px;
   }
 
   .model-card__area {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .model-card__label {
+    font-size: 14px;
+    padding: 0 12px 6px;
+  }
+
+  .model-card__image-container {
+    padding: 12px 0;
+    gap: 6px;
   }
 
   .model-card__image {
-    height: 250px;
+    height: 200px;
+  }
+
+  .model-card__arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  .model-card__arrow svg {
+    width: 20px;
+    height: 20px;
   }
 
   .model-card__buttons {
@@ -374,6 +404,7 @@
   .model-card__btn {
     width: 100%;
     height: 40px;
+    font-size: 14px;
   }
 
   .model-card__btn--info {
@@ -388,31 +419,36 @@
     height: 350px;
   }
 
+  .gallery__gradient {
+    height: 150px;
+  }
+
   .gallery__chip {
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     min-width: auto;
-    padding: 12px 16px;
+    padding: 10px 14px;
     width: auto;
     height: auto;
   }
 
   .gallery__chip-text {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .gallery__caption {
-    bottom: 50px;
+    bottom: 40px;
     left: 20px;
     font-size: 16px;
   }
 
   .gallery__controls {
-    bottom: 20px;
+    bottom: 15px;
     right: 20px;
+    width: 80px;
   }
 
   .gallery__arrow {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
