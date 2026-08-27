@@ -179,18 +179,7 @@
 }
 
 .gallery__chip {
-  position: absolute;
-  top: 110px;
-  right: 40px;
-  background-color: var(--cream);
-  padding: 16px 24px;
-  border-radius: 6px;
-  z-index: 10;
-  width: 321px;
-  height: 71px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 
 .gallery__chip-text {
