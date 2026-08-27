@@ -62,6 +62,10 @@
   line-height: 1.0;
 }
 
+.house-sheet__name--light {
+  font-weight: 300;
+}
+
 .house-sheet__area {
   font-family: 'Fahkwang', sans-serif;
   font-size: 32px;
