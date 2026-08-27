@@ -50,7 +50,10 @@ function updateGallery() {
   slides.forEach(slide => slide.classList.remove('active'));
   slides[currentGallery].classList.add('active');
 
-  document.getElementById('galleryHouse').textContent = galleries[currentGallery].house;
+  const houseText = galleries[currentGallery].house;
+  const houseParts = houseText.split(' ');
+  const formattedHouse = `<span class="gallery__chip-text--light">${houseParts[0]}</span> ${houseParts[1]}`;
+  document.getElementById('galleryHouse').innerHTML = formattedHouse;
   document.getElementById('galleryCaption').textContent = galleries[currentGallery].caption;
 
   clearTimeout(galleryTimer);

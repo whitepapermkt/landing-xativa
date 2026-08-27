@@ -270,6 +270,10 @@
   line-height: 1.0;
 }
 
+.gallery__chip-text--light {
+  font-weight: 300;
+}
+
 .gallery__caption {
   position: absolute;
   bottom: 70px;

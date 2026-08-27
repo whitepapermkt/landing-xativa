@@ -178,8 +178,17 @@
   pointer-events: none;
 }
 
-.gallery__chip {
-  display: none;
+.gallery__chip-text {
+  font-family: 'Neutra Text', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--dark);
+  text-align: center;
+  line-height: 1.0;
+}
+
+.gallery__chip-text--light {
+  font-weight: 300;
 }
 
 .gallery__chip-text {
